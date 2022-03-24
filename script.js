@@ -2,13 +2,17 @@
 
 console.log("hi");
 
-// XLSX is a global from the standalone script
+var url = "data.xlsx"
 
-(async() => {
-  const url = "data.xlsx";
-  const data = await (await fetch(url)).arrayBuffer();
-  /* data is an ArrayBuffer */
-  const workbook = XLSX.read(data);
+/* set up async GET request */
+var req = new XMLHttpRequest()
+req.open("GET", url, true)
+req.responseType = "arraybuffer"
 
+req.onload = function(e) {
+  var workbook = XLSX.read(req.response)
+  console.log("data loaded")
   /* DO SOMETHING WITH workbook HERE */
-})();
+}
+
+req.send()
