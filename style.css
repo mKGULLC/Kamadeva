@@ -1,0 +1,15 @@
+#main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+th {
+  position: sticky;
+  top: 0;
+}
+
+.name-cell {
+  position: sticky;
+  left: 0;
+}

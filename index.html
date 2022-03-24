@@ -5,7 +5,8 @@
   <!-- dependencies -->
   <script defer src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
   <script defer src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
-  <script defer src="script.js"></script>
+  <script defer src="js/table-sort.js"></script>
+  <script defer src="js/script.js"></script>
 
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -16,11 +17,11 @@
 </head>
 <body>
 
-<div id="main" class="container">
+<div id="main" class="container-xxl">
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4">Filters</span>
+      <span id="heading" class="fs-4">Filters</span>
     </a>
 
     <ul class="nav nav-pills">
@@ -31,7 +32,33 @@
     </ul>
   </header>
 
-  <div id="data-display">
+  <div class="overflow-auto">
+    <table class="table table-striped table-hover table-sort" id="display_table">
+      <thead>
+        <tr class="table-primary">
+          <th scope="col" class="name-cell" style="z-index: 1">Name</th>
+          <th scope="col">Number</th>
+          <th scope="col">Gender</th>
+          <th scope="col">Birth Year</th>
+          <th scope="col">Height</th>
+          <th scope="col">Occupation</th>
+          <th scope="col">Current Residence</th>
+          <th scope="col">Arrival in Canada</th>
+          <th scope="col">Imm. Status</th>
+          <th scope="col">Hometown</th>
+          <th scope="col">Edu Level</th>
+          <th scope="col">Uni Major</th>
+          <th scope="col">Field of Work</th>
+          <th scope="col">Hobbies</th>
+          <th scope="col">Languages</th>
+          <th scope="col">Rel. Status</th>
+          <th scope="col">Looking For</th>
+          <th scope="col">Religion</th>
+        </tr>
+      </thead>
+      <tbody id="display_table_body">
+      </tbody>
+    </table>
   </div>
 </div>
 
