@@ -1,5 +1,5 @@
 'use strict';
-import { DataDisplay } from '/js/DataDisplay.js'
+import { DataDisplay } from './js/DataDisplay.js'
 const DATA_DISPLAY = new DataDisplay("display_table_body", "profile_modal")
 
 const url = "data.xlsx"
