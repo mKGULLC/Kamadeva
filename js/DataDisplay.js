@@ -70,7 +70,6 @@ function updateProfileModal(event) {
     if (person[`Assigned Number`] == map.get(`number`)) {return true}
   }
   let person = dd.data.find(match_number)
-  console.log(person)
   map.set(`hobbies`, person["What are some of your hobbies ?"])
   map.set(`looking for`, person["Partner Requests"])
 
