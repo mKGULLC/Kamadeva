@@ -13,3 +13,11 @@ th {
   position: sticky;
   left: 0;
 }
+
+.bi-gender-male {
+  color: blue;
+}
+
+.bi-gender-female {
+  color: red;
+}
