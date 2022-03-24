@@ -2,17 +2,19 @@
 
 console.log("hi");
 
-var url = "data.xlsx"
+const url = "data.xlsx"
 
 /* set up async GET request */
-var req = new XMLHttpRequest()
+let req = new XMLHttpRequest()
 req.open("GET", url, true)
 req.responseType = "arraybuffer"
 
 req.onload = function(e) {
-  var workbook = XLSX.read(req.response)
+  let workbook = XLSX.read(req.response)
   console.log("data loaded")
   /* DO SOMETHING WITH workbook HERE */
+  let jsa = XLSX.utils.sheet_to_json(worksheet, opts)
+  console.log(jsa)
 }
 
 req.send()
