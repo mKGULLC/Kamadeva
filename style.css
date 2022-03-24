@@ -4,6 +4,16 @@
   height: 100vh;
 }
 
+.table_vp {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+table {
+
+  font-size: small;
+}
+
 th {
   position: sticky;
   top: 0;
