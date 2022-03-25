@@ -4,13 +4,15 @@
   height: 100vh;
 }
 
-.table_vp {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
+form .form-check {
+  display: block;
+}
+
+form button {
+  margin-left: 0.5rem;
 }
 
 table {
-
   font-size: small;
 }
 

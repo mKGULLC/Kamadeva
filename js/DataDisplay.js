@@ -23,8 +23,22 @@ export class DataDisplay {
     })
   }
   log() { console.log(this.data) }
-  show(args) {
+  show(filters) {
+    let first = true
     let result = this.data
+    //filter results
+    if (filters) {
+      function match(person) {
+        if (filters.gender !== `All`) {
+          if (person.Gender !== filters.gender) {return false}
+        }
+        let values = Object.values(person)
+        let text = values.reduce( (a,b) => a+b )
+        return filters.search.test(text)
+      }
+      result = result.filter( person => match(person) )
+    }
+
     let rows = ""
     result.forEach(person => {rows+=`
       <tr>
